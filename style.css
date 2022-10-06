@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    /* "*" = select all the elements*/
+
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*here this link describe we are using border-box: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing*/
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: #f0f0f0;
+    width: 100%;
+    position: fixed;
+    /*to make the header still apearing while scrolling*/
+    z-index: 999;
+    /*to avoid any thing appears above the header while scrolling*/
+    display: flex;
+    justify-content: space-between;
+    /*space-betwen the childs in the header parent */
+    align-items: center;
+    /*jusify the contnent virtcally*/
+    padding: 10px 200px;
+}
+
+.logo {
+    text-decoration: none;
+    color: #3a6cf4;
+    font-size: 1.8em;
+    /*1em = 16px*/
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #3a6cf4;
+    font-size: 1.1em;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 30px;
+}
+
+.navigation a:hover {
+    color: blue;
+}
+
+section {
+    padding: 100px 200px;
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    /*we can not use "align-items" without using "display: flex;" */
+    background: url(/images/frontend-background-1536x1024.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /*we make the bacground scroll down with me*/
+}
+
+.main h2 {
+    color: black;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+
+.main h2 span {
+    display: inline-block;
+    /*because the span is an inline items so we can not add margin on it so we need to change the display: inline-blcok*/
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #3a6cf4;
+    font-size: 1.8em;
+    font-weight: 600;
+
+}
+
+.main h3 {
+    color: black;
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+.main-btn {
+    text-decoration: none;
+    color: #fff;
+    background-color: #3a6cf4;
+    letter-spacing: 1px;
+    padding: 0.9375em 2.1875em;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    /*becausethe"a"isaninlineitemssowecannotaddmarginonitsoweneedtochangethedisplay:;
+    inline-blcok*/
+    margin-bottom: 30px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: 0.7s ease;
+    -webkit-transition: 0.7s ease;
+    -moz-transition: 0.7s ease;
+    -ms-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
+}
+
+.main-btn:hover {
+    background-color: #0a49f6;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.social-media a {
+    color: black;
+    font-size: 1.7em;
+    padding: 20px;
+}
+
+.title {
+    display: flex;
+    /*we use display: flex to make the content be centered*/
+    justify-content: center;
+    /*jusify the contnent horizantally*/
+    color: #3a6cf4;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #fff;
+    width: 21.25em;
+    box-shadow: 0px 5px 25px rgba(1 1 1 / 15%);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+    -webkit-transition: 0.7s ease;
+    -moz-transition: 0.7s ease;
+    -ms-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.icon {
+    color: #3a6cf4;
+    font-size: 8em;
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    color: #3a6cf4;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+}
+
+.projects {
+    background-color: #cfcfcf;
+}
+
+.projects .content {
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #fff;
+    box-shadow: 0px 5px 25px rgba(1 1 1 / 15%);
+    border: 1px solid black;
+    min-height: 14em;
+    width: 23em;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease;
+    -webkit-transition: 0.7s ease;
+    -moz-transition: 0.7s ease;
+    -ms-transition: 0.7s ease;
+    -o-transition: 0.7s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+
+.project-image img {
+    width: 100%;
+}
+
+.project-card:hover .project-image {
+    opacity: 0.9;
+}
+
+.project-info {
+    padding: 1em;
+}
+
+.project-category {
+    font-size: 0.8em;
+    color: black;
+}
+
+.project-title {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.more-details-btn {
+    text-decoration: none;
+    color: #3a6cf4;
+}
+
+.more-details-btn:hover {
+    color: #0a49f6;
+}
+
+.contact .icon {
+    font-size: 4.5em;
+}
+
+.contact .info h3 {
+    color: black;
+}
+
+.contact .info p {
+    font-size: 1.4em;
+}
+
+.footer {
+    background-color: #cfcfcf;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 600;
+
+}
+
+.copyright span {
+    color: #3a6cf4;
+}
+
+.footer .social-media {
+    font-size: 1.3em;
+    padding-right: 12px;
+}
+
+@media (max-width:1023px) {
+    header {
+        padding: 12px 20px;
+    }
+
+    .navigation a {
+        padding-left: 10px;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    section {
+        padding: 80px 20px;
+    }
+
+    .main h2 {
+        font-size: 1em;
+    }
+
+    .main h3 {
+        font-size: 1.6em;
+    }
+
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(max-width:641px) {
+    body {
+        font-size: 12px;
+    }
+
+    .main h2 {
+        font-size: 0.8em;
+    }
+
+    .main h3 {
+        font-size: 1.4em;
+    }
+}
+
+@media(max-width:300px) {
+    body {
+        font-size: 10px;
+    }
+}
